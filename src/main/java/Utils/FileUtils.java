@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 
 public class FileUtils {
 
-    private static final String PATH = "..\\resources\\";
+    private static final String PATH = new File("").getAbsolutePath() + "\\src\\main\\resources\\";
 
     public static List<String> getLinesFromInput(String fileName) throws FileNotFoundException {
         return getBufferedReaderFromFile(fileName)
