@@ -1,4 +1,4 @@
-package Day04;
+package day04;
 
 public class Passport {
     private final String byr;

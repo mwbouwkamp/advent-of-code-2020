@@ -1,4 +1,4 @@
-package Day02;
+package day02;
 
 import Utils.FileUtils;
 
@@ -14,13 +14,13 @@ public class Day02 {
 
     private static long solveDay02a(List<String> passwords) {
         return passwords.stream()
-                .filter(p -> isValidPasswordDay02a(p))
+                .filter(Day02::isValidPasswordDay02a)
                 .count();
     }
 
     private static long solveDay02b(List<String> passwords) {
         return passwords.stream()
-                .filter(p -> isValidPasswordDay02b(p))
+                .filter(Day02::isValidPasswordDay02b)
                 .count();
     }
 

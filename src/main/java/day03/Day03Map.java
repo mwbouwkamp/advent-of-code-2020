@@ -1,6 +1,5 @@
-package Day03;
+package day03;
 
-import java.awt.*;
 import java.util.List;
 
 public class Day03Map {

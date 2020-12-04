@@ -1,4 +1,4 @@
-package Day03;
+package day03;
 
 import Utils.FileUtils;
 
