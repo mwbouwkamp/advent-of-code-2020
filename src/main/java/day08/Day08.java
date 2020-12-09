@@ -38,7 +38,6 @@ public class Day08 {
                 if ("Finished:".equals(answer[0])) {
                     return Integer.parseInt(answer[1]);
                 }
-
             }
         }
         return -1;
