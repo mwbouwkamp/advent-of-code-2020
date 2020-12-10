@@ -14,8 +14,6 @@ public class Day09 {
         long solutionA = solveDay09a(input, PREAMBLE);
         System.out.println(solutionA);
         System.out.println(solveDay09b(input, solutionA));
-
-
     }
 
     private static long solveDay09a(List<Long> input, int preamble) {
