@@ -20,4 +20,17 @@ public class Ticket {
                 .filter(v -> rules.stream().noneMatch(r -> r.matchesRule(v)))
                 .collect(Collectors.toList());
     }
+
+    public boolean hasMismatchingNumber(List<Rule> rules) {
+        return values.stream()
+                .anyMatch(v -> rules.stream().noneMatch(r -> r.matchesRule(v)));
+    }
+
+    public int getValue(int index) {
+        return values.get(index);
+    }
+
+    public List<Integer> getValues() {
+        return values;
+    }
 }

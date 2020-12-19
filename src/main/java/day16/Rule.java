@@ -26,6 +26,10 @@ public class Rule {
                 .anyMatch(r -> number >= r.min && number <= r.max);
     }
 
+    public String getLabel() {
+        return label;
+    }
+
     private class Range {
         int min;
         int max;
