@@ -15,9 +15,6 @@ public class Day23 {
                 .mapToInt(Integer::parseInt)
                 .boxed()
                 .collect(Collectors.toList());
-        int minValue = circle.stream()
-                .min(Integer::compareTo)
-                .orElse(-1);
         int pointer = 0;
         for (int i = 0; i < 100; i++) {
             int current = circle.get(pointer);
@@ -26,21 +23,28 @@ public class Day23 {
                 selection.add(circle.get((pointer + j + 1) % circle.size()));
             }
             circle.removeAll(selection);
-
             int nextpointerValue = circle.get((circle.indexOf(current) + 1) % circle.size());
 
-            int target = circle.stream()
-                    .filter(n -> n != current)
-                    .mapToInt(n -> current - n)
-                    .filter(n -> n > 0)
-                    .min()
-                    .orElse(circle.stream().max(Integer::compareTo).get());
-            if (target < current) {
-                target = current - target;
+            int target = current - 1;
+            for (int number: selection) {
+                if (target == number) {
+                    target--;
+                }
             }
+
+
+
+//            int target = circle.stream().parallel()
+//                    .filter(n -> n != current)
+//                    .mapToInt(n -> current - n)
+//                    .filter(n -> n > 0)
+//                    .min()
+//                    .orElse(circle.stream().max(Integer::compareTo).get());
+//            if (target < current) {
+//                target = current - target;
+//            }
             int indexOfTarget = circle.indexOf(target);
             circle.addAll(indexOfTarget + 1, selection);
-            System.out.println(circle.toString());
             pointer = circle.indexOf(nextpointerValue);
         }
         int indexOfOne = circle.indexOf(1);
