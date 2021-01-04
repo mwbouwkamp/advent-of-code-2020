@@ -14,7 +14,7 @@ public class Day14 {
         String mask = "";
         for (String line: input) {
             if (line.startsWith("mask")) {
-                mask = input.get(0).substring(7);
+                mask = line.substring(7);
             } else {
                 String[] parts = line.split(" ");
                 int index = Integer.parseInt(parts[0]
