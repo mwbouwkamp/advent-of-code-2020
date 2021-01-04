@@ -12,7 +12,6 @@ public class Day23Circle {
         }
         System.out.println(circle.getResult());
 
-        // 2147011073 too low
 
     }
 }

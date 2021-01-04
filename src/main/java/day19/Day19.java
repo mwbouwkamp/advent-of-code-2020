@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 
 public class Day19 {
     public static void main(String[] args) throws FileNotFoundException {
-        List<String> input = FileUtils.getLinesFromInput("input19.txt");
+        List<String> input = FileUtils.getLinesFromInput("input19test.txt");
         int i = 0;
         Map<String, Rule> rules = new HashMap<>();
         for (; i < input.size(); i++) {
